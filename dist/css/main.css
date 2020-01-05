@@ -1,0 +1,73 @@
+.navbar {
+  box-shadow: 2px 2px 5px #3292a6;
+  opacity: 0.9;
+  background-color: #fff; }
+  .navbar .nav-item {
+    font-size: 1.3rem;
+    padding-right: 1.2rem; }
+
+#showcase {
+  background: linear-gradient(rgba(50, 146, 166, 0.8), rgba(50, 146, 166, 0.8)), url("../img/mountains.jpg");
+  background-size: cover;
+  background-repeat: none;
+  min-height: 50vh;
+  overflow: hidden;
+ }
+
+  #showcase h1 {
+    font-weight: 700;
+  }
+
+
+
+.info-header {
+  width: 50%;
+  margin: auto;
+  border-bottom: 1px #ddd solid; }
+
+#authors img {
+  margin: -50px; }
+
+#authors .card {
+  transition: all 0.1s linear; }
+
+#authors .card:hover {
+  background: #3292a6;
+  color: #fff; }
+
+#authors .fab {
+  color: #fff; }
+
+@media (max-width: 768px) {
+  #showcase .py-5 {
+    padding-bottom: 10px !important; }
+  #showcase h1 {
+    font-size: 2rem; 
+  
+  }
+
+  .lead {
+  font-size: 1rem !important;
+  }
+
+  #showcase .btn {
+    font-size: 1rem;
+  }
+
+  .mb-resp {
+    margin-bottom: 1rem; 
+  } 
+
+  #showcase {
+    background: linear-gradient(rgba(50, 146, 166, 0.8), rgba(50, 146, 166, 0.8)), url("../img/mountains.jpg");
+   }
+  
+  .info-header {
+    width: 90%;
+    margin: auto;
+    border-bottom: 1px #ddd solid; }
+  
+
+
+
+}

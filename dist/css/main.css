@@ -26,6 +26,10 @@
    background: rgb(70,28,113) !important;
  }
 
+ .card {
+   border-color: rgb(70,28,113) !important;
+ }
+
   #showcase h1 {
     font-weight: 700;
   }
@@ -56,12 +60,16 @@
   transition: all 0.1s linear; }
 
 #authors .card:hover {
-  background: #3292a6;
+  background: rgb(70,28,113);
   color: #fff; }
 
 #authors .fab {
   color: #fff; }
 
+  .img {
+    height: 110px;
+    width:110px
+  }
 @media (max-width: 768px) {
   #showcase .py-5 {
     padding-bottom: 10px !important; }

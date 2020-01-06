@@ -202,7 +202,7 @@ means that we are into commodity warehousing/sales
               </div>
             </div>
             <div class="col-lg-3 col-md-6">
-                <div class="card">
+                <div class="card-2 card">
                   <div class="card-body">
                     <img src="img/person2.jpg" alt="" class="img img-fluid rounded-circle mb-3">
                     <h3>Li Ke</h3>
@@ -231,16 +231,18 @@ means that we are into commodity warehousing/sales
               <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Corporis quos repudiandae iure itaque aut! Harum?</p>
             </div>
            <form 
-           action="https://formspree.io/mnqjywpa"
-           method="POST"
+           id="my-form"
+           action="https://formspree.io/mwkvdkvj"
+          method="POST"
            >
+           <div id="my-form-status"></div>
              <div class="input-group input-group-lg mb-3">
                <div class="input-group-prepend">
                  <span class="input-group-text">
                    <i class="fas fa-user"></i>
                  </span>
                </div>
-               <input type="text" class="form-control" type="text" name="_replyto" placeholder="Name">
+               <input type="text" class="form-control" type="text" placeholder="Name">
              </div>
              <div class="input-group input-group-lg mb-3">
                 <div class="input-group-prepend">
@@ -258,7 +260,8 @@ means that we are into commodity warehousing/sales
                   </div>
                   <textarea type="text" class="form-control" row="5"  placeholder="Message"></textarea>
                 </div>
-                <input type="submit" value="submit" class="btn btn-primary btn-block btn-lg"> 
+                <input type="submit" value="submit" id="my-form-button" class="btn btn-primary btn-block btn-lg"> 
+            
              </form>
             </div>
        </div>
@@ -285,6 +288,54 @@ means that we are into commodity warehousing/sales
  <script src="js/bootstrap.bundle.min.js"></script>
  <!-- script js -->
   <script>
+
+window.addEventListener("DOMContentLoaded", function() {
+
+// get the form elements defined in your form HTML above
+
+var form = document.getElementById("my-form");
+var button = document.getElementById("my-form-button");
+var status = document.getElementById("my-form-status");
+
+// Success and Error functions for after the form is submitted
+
+function success() {
+  form.reset();
+  button.style = "display: none ";
+  status.classList.add('alert', 'alert-success');
+  status.innerHTML = "Thanks!, Your message has been sent!";
+}
+
+function error() {
+  status.innerHTML = "Oops! There was a problem.";
+}
+
+// handle the form submission event
+
+form.addEventListener("submit", function(ev) {
+  ev.preventDefault();
+  var data = new FormData(form);
+  ajax(form.method, form.action, data, success, error);
+});
+});
+
+// helper function for sending an AJAX request
+
+function ajax(method, url, data, success, error) {
+var xhr = new XMLHttpRequest();
+xhr.open(method, url);
+xhr.setRequestHeader("Accept", "application/json");
+xhr.onreadystatechange = function() {
+  if (xhr.readyState !== XMLHttpRequest.DONE) return;
+  if (xhr.status === 200) {
+    success(xhr.response, xhr.responseType);
+  } else {
+    error(xhr.status, xhr.response, xhr.responseType);
+  }
+};
+xhr.send(data);
+}
+
     // Get the current year for the copyright
     $('#year').text(new Date().getFullYear());
     // Init Scrollspy

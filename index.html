@@ -137,10 +137,6 @@ means that we are into commodity warehousing/sales
                </h1>
               
              </div>
-
-
-
-
                  <div class="about mx-auto">
                    <p class="text-muted">
                     Phase Enterprises is a duly registered Nigerian Company. Our main
@@ -162,9 +158,78 @@ means that we are into commodity warehousing/sales
                     <p class="text-muted">
                     Our strength lies in the direct productions and/or sourcing of our
                     high quality products at affordable prices within the reach of
-                    everybody
+                    everybody.
                    </p>
                  </div>
+            
+     </section>
+
+     <!-- Gallery -->
+     <section id="gallery" class="gallery py-5">
+       <div class="container">
+         <div class="row">
+           <div class="col">
+             <div class="info-header text-center mb-5">
+               <h1 class="text-primary pb-3">
+                 Gallery
+               </h1>
+               <!-- <p class="lead">
+                 
+               </p> -->
+             </div>
+           
+             <div class="row mx-auto">
+               <div class="col-12 col-md-4 mt-3">
+                <div class="card">
+                  <img src="img/Fresh ginger.jpg" class="card-img-top" alt="...">
+                  <div class="card-body">
+                    <p class="card-text">Fresh Ginger</p>
+                  </div>
+                </div>
+               </div>
+               <div class="col-12 col-md-4 mt-3">
+                <div class="card">
+                  <img src="img/Freshchillipepper.jpg" class="card-img-top" alt="...">
+                  <div class="card-body">
+                    <p class="card-text">Fresh Chilli Pepper</p>
+                  </div>
+                </div>
+               </div>
+               <div class="col-12 col-md-4 mt-3">
+                <div class="card">
+                  <img src="img/Sun dried arabica coffee bean.jpg" class="card-img-top" alt="...">
+                  <div class="card-body">
+                    <p class="card-text">Sun dried arabica coffee bean</p>
+                  </div>
+                </div>
+               </div>
+               <div class="col-12 col-md-4 mt-3">
+                <div class="card">
+                  <img src="img/Sun dried chilliprpper.jpg" class="card-img-top" alt="...">
+                  <div class="card-body">
+                    <p class="card-text">Sun dried chilli pepper</p>
+                  </div>
+                </div>
+               </div>
+               <div class="col-12 col-md-4 mt-3">
+                <div class="card">
+                  <img src="img/Sun dried cocoa bean .jpg" class="card-img-top" alt="...">
+                  <div class="card-body">
+                    <p class="card-text">Sun Dried Cocoa Bean</p>
+                  </div>
+                </div>
+               </div>
+               <div class="col-12 col-md-4 mt-3">
+                <div class="card">
+                  <img src="img/Sun dried shredded ginger.jpg" class="card-img-top" alt="...">
+                  <div class="card-body">
+                    <p class="card-text">Sun Dried Shredded Ginger</p>
+                  </div>
+                </div>
+               </div>
+         
+              
+             </div>
             
      </section>
 
@@ -179,9 +244,9 @@ means that we are into commodity warehousing/sales
                <h1 class="text-primary pb-3">
                  Meet The Team
                </h1>
-               <p class="lead">
+               <!-- <p class="lead">
                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium dolor voluptates earum incidunt sint cum eos neque placeat doloremque sit!
-               </p>
+               </p> -->
              </div>
            </div>
          </div>
@@ -228,9 +293,9 @@ means that we are into commodity warehousing/sales
               <h1 class="text-primary">
                 Contact Us
               </h1>
-              <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Corporis quos repudiandae iure itaque aut! Harum?</p>
+              <p>Get In touch with us. Kindly leave a message</p>
             </div>
-           <form 
+            <form 
            id="my-form"
            action="https://formspree.io/mwkvdkvj"
           method="POST"
@@ -242,7 +307,7 @@ means that we are into commodity warehousing/sales
                    <i class="fas fa-user"></i>
                  </span>
                </div>
-               <input type="text" class="form-control" type="text" placeholder="Name">
+               <input type="text" class="name form-control" placeholder="Name">
              </div>
              <div class="input-group input-group-lg mb-3">
                 <div class="input-group-prepend">
@@ -250,7 +315,7 @@ means that we are into commodity warehousing/sales
                     <i class="fas fa-envelope"></i>
                   </span>
                 </div>
-                <input type="email" class="form-control" placeholder="Email">
+                <input type="email" class="email form-control" name="_replyto" placeholder="Email">
               </div>
               <div class="input-group input-group-lg mb-3">
                   <div class="input-group-prepend">
@@ -258,11 +323,12 @@ means that we are into commodity warehousing/sales
                       <i class="fas fa-pencil-alt"></i>
                     </span>
                   </div>
-                  <textarea type="text" class="form-control" row="5"  placeholder="Message"></textarea>
+                  <textarea type="text" class="message form-control" row="5" placeholder="Message"></textarea>
                 </div>
                 <input type="submit" value="submit" id="my-form-button" class="btn btn-primary btn-block btn-lg"> 
             
              </form>
+
             </div>
        </div>
      </section>
@@ -288,53 +354,6 @@ means that we are into commodity warehousing/sales
  <script src="js/bootstrap.bundle.min.js"></script>
  <!-- script js -->
   <script>
-
-window.addEventListener("DOMContentLoaded", function() {
-
-// get the form elements defined in your form HTML above
-
-var form = document.getElementById("my-form");
-var button = document.getElementById("my-form-button");
-var status = document.getElementById("my-form-status");
-
-// Success and Error functions for after the form is submitted
-
-function success() {
-  form.reset();
-  button.style = "display: none ";
-  status.classList.add('alert', 'alert-success');
-  status.innerHTML = "Thanks!, Your message has been sent!";
-}
-
-function error() {
-  status.innerHTML = "Oops! There was a problem.";
-}
-
-// handle the form submission event
-
-form.addEventListener("submit", function(ev) {
-  ev.preventDefault();
-  var data = new FormData(form);
-  ajax(form.method, form.action, data, success, error);
-});
-});
-
-// helper function for sending an AJAX request
-
-function ajax(method, url, data, success, error) {
-var xhr = new XMLHttpRequest();
-xhr.open(method, url);
-xhr.setRequestHeader("Accept", "application/json");
-xhr.onreadystatechange = function() {
-  if (xhr.readyState !== XMLHttpRequest.DONE) return;
-  if (xhr.status === 200) {
-    success(xhr.response, xhr.responseType);
-  } else {
-    error(xhr.status, xhr.response, xhr.responseType);
-  }
-};
-xhr.send(data);
-}
 
     // Get the current year for the copyright
     $('#year').text(new Date().getFullYear());

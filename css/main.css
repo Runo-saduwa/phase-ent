@@ -63,6 +63,11 @@
   background: rgb(70,28,113);
   color: #fff; }
 
+
+.gallery .card img {
+  max-height: 185px;
+  overflow: hidden;
+}
 #authors .fab {
   color: #fff; }
 
@@ -98,6 +103,8 @@
 .card-2 {
   margin-top: 50px;
 }
+
+
 
 
 }
